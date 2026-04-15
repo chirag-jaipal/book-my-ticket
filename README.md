@@ -62,7 +62,7 @@ src/
 ### 1. Clone Repository
 
 ```bash
-git clone <your-repo-link>
+git clone https://github.com/chirag-jaipal/book-my-ticket.git
 cd book-my-ticket
 ```
 
