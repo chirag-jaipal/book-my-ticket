@@ -15,6 +15,7 @@ import cors from "cors";
 import errorHandler from "./src/common/middleware/error.mddleware.js";
 import authRoutes from "./src/modules/auth/auth.routes.js";
 import bookingRoutes from "./src/modules/booking/booking.routes.js";
+import seatRoutes from "./src/modules/seats/seats.routes.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -39,8 +40,9 @@ const app = new express();
 app.use(express.json());
 app.use(cors());
 
-app.use("/auth", authRoutes);
-app.use("/book", bookingRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/book", bookingRoutes);
+app.use("/api/seats", seatRoutes);
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
