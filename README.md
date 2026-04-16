@@ -43,10 +43,15 @@ src/
 │ │ ├── auth.controller.js
 │ │ └── auth.service.js
 │
-│ └── booking/
-│ ├── booking.routes.js
-│ ├── booking.controller.js
-│ └── booking.service.js
+│ ├── booking/
+│ │ ├── booking.routes.js
+│ │ ├── booking.controller.js
+│ │ └── booking.service.js
+│
+│ └── seats/
+│     ├── seats.routes.js
+│     ├── seats.controller.js
+│     └── seats.service.js
 │
 ├── .env
 ├── index.mjs
@@ -110,18 +115,26 @@ Steps:
 
 ### Auth
 
-| Method | Route          | Description   |
-| ------ | -------------- | ------------- |
-| POST   | /auth/register | Register user |
-| POST   | /auth/login    | Login user    |
+| Method | Route              | Description   |
+| ------ | ------------------ | ------------- |
+| POST   | /api/auth/register | Register user |
+| POST   | /api/auth/login    | Login user    |
 
 ---
 
 ### Booking (Protected)
 
-| Method | Route     | Description                |
-| ------ | --------- | -------------------------- |
-| PUT    | /book/:id | Book a seat (requires JWT) |
+| Method | Route         | Description                |
+| ------ | ------------- | -------------------------- |
+| PUT    | /api/book/:id | Book a seat (requires JWT) |
+
+---
+
+### Seats
+
+| Method | Route      | Description     |
+| ------ | ---------- | --------------- |
+| GET    | /api/seats | Get total seats |
 
 ---
 
